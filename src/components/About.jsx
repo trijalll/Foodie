@@ -19,13 +19,6 @@ function About() {
           <img className="p-4 md:p-12 w-full rounded-lg shadow-lg" src={img1} alt="Tasty & Fresh Food" />
         </a>
       </div>
-
-      {/* Footer Section */}
-      <footer className="bg-gray-800 text-white w-full py-4 text-center">
-        <div className="text-lg font-medium">
-          <span>Created by ♥ Trijal Singh</span>
-        </div>
-      </footer>
     </div>
   );
 }
