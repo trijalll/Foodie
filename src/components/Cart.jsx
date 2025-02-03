@@ -13,22 +13,34 @@ function Cart() {
   };
 
   return (
-    <div className="text-center m-auto mt-16 sm:mt-[7.5em]">
-      <h1 className="font-bold text-xl sm:text-3xl">Cart</h1>
+    <div className="text-center m-auto mt-16 sm:mt-[7.5em] px-4">
+      <h1 className="font-bold text-3xl sm:text-4xl text-gray-800 mb-6">
+        Your Cart
+      </h1>
+      
+      {/* Clear Cart Button */}
       <button
-        className="bg-black text-white p-2 rounded-lg m-2 hover:bg-gray-800"
+        className="bg-slate-700 text-white text-[1vw] px-5 py-2 rounded-full m-4 hover:bg-gray-800 transition ease-in-out duration-200 transform hover:scale-105"
         onClick={handleClearCart}
       >
         Clear Cart
       </button>
+      
+      {/* Cart Empty Message */}
       {cartItems.length === 0 ? (
-        <h2 className="text-lg sm:text-xl">Cart is empty</h2>
+        <h2 className="text-lg sm:text-xl text-gray-600">
+          Your cart is empty. Start shopping now!
+        </h2>
       ) : (
-        <div className="max-w-screen-md w-4/5 bg-gray-50 shadow-lg m-auto my-6">
+        <div className="max-w-screen-md w-full bg-gray-50 shadow-lg rounded-lg overflow-hidden mx-auto my-6 p-4">
           <ExpandList items={cartItems} page="Cart" />
         </div>
       )}
-      <TotalCart />
+
+      {/* Total Price Section */}
+      <div className="">
+        <TotalCart />
+      </div>
     </div>
   );
 }

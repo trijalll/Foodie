@@ -10,8 +10,12 @@ function TotalCart() {
   }, 0);
 
   return (
-    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl p-2 bg-gray-700 text-white rounded-lg font-bold text-xl hover:bg-slate-600">
-      <button>Total: ₹ {totalAmount.toFixed(2)}</button>
+    <div className="flex justify-center w-full mt-8 mb-8">
+      <div className="w-full max-w-5xl p-4 bg-gray-700 text-white rounded-full text-[1.3vw] hover:bg-slate-600">
+        <button className="w-full text-center">
+          Total: ₹ {totalAmount.toFixed(2)}
+        </button>
+      </div>
     </div>
   );
 }
